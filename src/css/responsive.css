@@ -1,5 +1,21 @@
 
 @media(max-width: 1080px) {
+    #logo img{
+        width: 300px;
+        height: 170px;
+    }
+
+    #central{
+        height: 310px;
+        width: 470px;
+    }
+
+    #imagem{
+
+        height: 300px;
+        width: 490px;
+    }
+
     #div_btns{
         /*flex-direction: column;
         align-items: center;*/
@@ -7,6 +23,11 @@
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
 
+    }
+
+    .btn{
+        width: 110px;
+        height: 110px;
     }
 
     .btn:nth-child(4){
@@ -31,7 +52,7 @@
     }    
 }
 
-@media(max-width: 780px){
+@media(max-width: 480px){
     #logo img{
         height: 110px;
         width: 220px;
@@ -50,9 +71,18 @@
         opacity: 80%;
     }
 
+    #div_btns{
+        gap: 5px;
+    }
+
     .btn{
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+        margin-inline: 5px;
+    }
+
+    .btn:hover{
+        transform: scale(1.1);
     }
 
 }
