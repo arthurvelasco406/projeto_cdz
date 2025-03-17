@@ -1,0 +1,88 @@
+
+@media(max-width: 1080px) {
+    #logo img{
+        width: 300px;
+        height: 170px;
+    }
+
+    #central{
+        height: 310px;
+        width: 470px;
+    }
+
+    #imagem{
+
+        height: 300px;
+        width: 490px;
+    }
+
+    #div_btns{
+        /*flex-direction: column;
+        align-items: center;*/
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+
+    }
+
+    .btn{
+        width: 110px;
+        height: 110px;
+    }
+
+    .btn:nth-child(4){
+        /*Estou dizendo que esse elemento vai ocupar a coluna 1 e se estender (span) até a coluna 2*/
+        grid-column: 1 /span 2;
+       
+        /*Como o elemento anterior já está se estendendo até a coluna 2, esse elemento não pode começar por essa coluna, então ocorre uma quebra de linha automática. 
+        MAS como eu quero que eles dividam o espaço das 3 colunas, eu forço os dois elementos a ficarem na linha 2 colocando grid-row: 2. Assim, ambos ficam na linha 2 dividindo a coluna 2 e consequentemente, ficam centralizados.*/
+        grid-row: 2;
+
+        
+        /*Se eu não fizesse assim, teria que usar margin-left para centralizar na mão. Mas assim fica bem mais acabado*/
+        /*margin-left: 115%;*/
+    }
+
+    .btn:nth-child(5){
+        /*Estou dizendo que esse elemento vai ocupar a coluna 2 e se estender (span) até a coluna 3.*/
+        grid-column: 2 / span 3;        
+        grid-row: 2;
+        /*margin-left: 115%;*/
+        
+    }    
+}
+
+@media(max-width: 480px){
+    #logo img{
+        height: 110px;
+        width: 220px;
+    }
+
+    #central{
+        width: 300px;
+        height: 200px;
+        border-radius: 50px;
+    }
+
+    #imagem{
+        width: 300px;
+        height: 200px;
+        border-radius: 50px;
+        opacity: 80%;
+    }
+
+    #div_btns{
+        gap: 5px;
+    }
+
+    .btn{
+        width: 80px;
+        height: 80px;
+        margin-inline: 5px;
+    }
+
+    .btn:hover{
+        transform: scale(1.1);
+    }
+
+}

@@ -1,0 +1,100 @@
+
+/* ----------------- Logo  -----------------*/
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logo img{
+    height: 220px;
+    width: 440px;
+    cursor: pointer;
+}
+
+/* ----------------- Imagem e texto  -----------------*/
+
+#div_pai_central{
+    display: flex;
+    justify-content: center;
+}
+
+#central{
+    width: 700px;
+    height: 500px;
+    border-radius: 50px;
+}
+
+#div_imagem{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    opacity: 80%;
+    border-radius: 50px;
+}
+
+#imagem{
+    width: 700px;
+    height: 500px;
+    border-radius: 50px;
+    opacity: 80%;
+
+}
+
+#div_texto{
+    /*Coloquei none só pra não aparecer agora*/
+    display: none;
+    position: absolute;
+    margin-left: 480px;
+    margin-top: 100px;
+    height: 250px;
+    width: 190px;
+    border: 5px black solid;
+    border-radius: 20px;
+    background-color: rgb(75, 75, 75);
+    opacity: 80%;
+}
+
+
+/* ----------------- Botões  -----------------*/
+
+#div_btns{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 2%;
+
+}
+
+.btn{
+   padding: 0px;
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+   width: 130px;
+   height: 130px;
+   border-radius: 100px;
+   border: 5px rgb(0, 0, 0) solid;
+   place-items: center;
+   margin-inline: 10px;
+
+   /*Permite que ao sair do mouse também aconteça uma transicao suave. Colocamos nele os atributos que são alterados pelo hover e o tempo que queremos*/
+   transition: border 0.2s, transform 0.2s, translate 0.2s;
+
+}
+
+.img_btn{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100%;
+
+
+}
+
+.btn:hover{
+    border: 5px rgb(136, 36, 230) solid;
+    transform: scale(1.2);
+    translate: (10px,50%);
+    
+    /*Não precisa mais por causa do transition que está no próprio botão*/
+    /* transition: 0.2s; */
+}
